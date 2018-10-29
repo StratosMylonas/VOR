@@ -1,0 +1,14 @@
+float complex* getData(void);
+void plot(float* vector, int len, char* filename);
+float* getFilter(int type);
+float* amdemod(float* z_real, float* z_imag);
+float* moving_avg(int frameSize, float* data);
+float* convolve(float* X, float* h);
+int* find_max_peaks(float* am, int win_size);
+int* find_min_peaks(float* am, int win_size);
+float find_freq(int *peaks);
+float find_am_mod_depth(float* am, int* max_peaks, int* min_peaks);
+float* fmdemod(float* z_real, float* z_imag);
+int find_phase(int* am_peaks, int* fm_peaks);
+float* hpf(float* signal, int CUTOFF);
+float* lpf(float* signal, int CUTOFF);
